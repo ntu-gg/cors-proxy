@@ -1,0 +1,15 @@
+{
+    "name": "ntu-gg/cors-proxy",
+    "description": "CORS proxy for NTU sites",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shouko",
+            "email": "imshouko@gmail.com"
+        }
+    ],
+    "require": {
+	"php": ">=5.3.3"
+    }
+}
