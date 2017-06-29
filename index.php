@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 function validate_host ($host) {
   return preg_match('/\.ntu\.edu\.tw$/i', $host) || (ip2long($host) >= ip2long('140.112.0.0') && ip2long($host) <= ip2long('140.112.255.255'));
