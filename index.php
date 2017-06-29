@@ -46,7 +46,7 @@ foreach ($http_response_header as $value) {
   }
 }
 
-if (mb_detect_encoding($body, 'BIG-5') == 'BIG-5' && !isset($_GET['noconvert'])) {
+if (mb_detect_encoding($body, 'UTF-8, BIG-5') == 'BIG-5' && !isset($_GET['noconvert'])) {
   res(iconv('BIG-5', 'UTF-8', $body), $status_code);
 }
 
