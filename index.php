@@ -52,7 +52,7 @@ if (!isset($_GET['nocache'])) {
   if (isset($_GET['cache'])) {
     $expires = abs($_GET['cache']);
   }
-  header('Cache-Control: max-age='.$expires);
+  header('Cache-Control: public, max-age='.$expires);
 }
 
 if (mb_detect_encoding($body, 'UTF-8, BIG-5') == 'BIG-5' && !isset($_GET['noconvert'])) {
