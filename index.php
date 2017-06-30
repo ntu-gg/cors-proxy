@@ -47,6 +47,14 @@ foreach ($http_response_header as $value) {
   }
 }
 
+if (!isset($_GET['nocache'])) {
+  $expires = 3600;
+  if (isset($_GET['cache'])) {
+    $expires = abs($_GET['cache']);
+  }
+  header('Cache-Control: max-age='.$expires);
+}
+
 if (mb_detect_encoding($body, 'UTF-8, BIG-5') == 'BIG-5' && !isset($_GET['noconvert'])) {
   res(iconv('BIG-5', 'UTF-8', $body), $status_code);
 }
